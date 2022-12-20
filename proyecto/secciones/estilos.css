@@ -1,0 +1,120 @@
+/*general*/
+body {
+    position: relative;
+    background-image: url("imagenes/color.png");
+    background-size: cover;
+    background-position: top left;
+    font-family: Montserrat, "Arial Black", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    color: #0E3159;
+    height:1024px;
+    display: grid;
+    grid-template-areas:
+'nav nav nav nav'
+'main main main main'
+'main main main main'
+'main main main main'
+'footer footer footer footer';
+
+}
+
+.contacto{
+    position: fixed;
+    top:50%;
+    width: 1em;
+    word-wrap: break-word;
+    text-align:center;
+   background-color: rgba(118, 148, 181,0.7);
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+
+    padding: 3px ;
+    padding-left: 0;
+    left: 0;
+    margin-left: 0;
+    z-index: 2;
+
+}
+.contacto a:link{
+    text-decoration:none;
+}
+main {
+    grid-area: main;
+    margin-top: 0;
+    height: fit-content;
+}
+
+footer {
+    /*position: relative;*/
+    grid-area: footer;
+
+
+    bottom: 0;
+    clear: both;
+    height: 4rem;
+    width: 100%;
+    background-color: #597EA9;
+    font-size: 12px;
+    display: inline-block;
+
+}
+.sublista{
+    font-size: 0.5em;
+
+}
+footer ul{
+    float: right;
+}
+footer li {
+    display: inline-block;
+}
+
+#direccion{
+    float: left;
+    text-align: left;
+
+
+}
+
+
+.red {
+    float: right;
+    margin-top: 10px;
+    margin-right: 2%;
+    margin-bottom: 15px;
+    height: 25px;
+    width: 25px;
+
+}
+a {
+    font-family: Montserrat, "Arial Black", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    color: #0E3159;;
+}
+a:hover{
+    color: #597EA9;
+}
+nav {
+    width: 100%;
+    font-size: 16px;
+    line-height: 13px;
+    grid-area: nav;
+    height:fit-content;
+    margin-bottom: 0;
+
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 6%;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+}
+input, textarea{
+    background-color: #597EA9;
+}

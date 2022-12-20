@@ -1,0 +1,81 @@
+@import url(../estilos.css);
+
+
+.contenedor{
+
+    float:left;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 415px;
+    grid-column-gap: 0;
+    height: fit-content;
+
+}
+figure{
+    height: fit-content;
+}
+
+#artista1 img, #artista2 img, #artista3 img{
+    height: 400px;
+    margin: 0;
+    width: 415px;
+}
+#flecha{
+    height: fit-content;
+    grid-column: 3/4;
+    grid-row: 1;
+    float: left;
+    margin-top: 2em;
+    margin-left:10em;
+
+}
+p.boton {
+    width: fit-content;
+    padding: 4px;
+    background-color: #C1CED9;
+    border-radius: 25px;
+    margin-right: 8em;
+    float: right;
+    margin-top: 0;
+}
+h1{
+    grid-column: 1/2;
+    grid-row: 1;
+}
+form{
+    grid-column: 2/3;
+    grid-row: 1;
+    margin-top: 2em;
+    margin-left: 2em;
+}
+#artista1{
+    margin: 0;
+    grid-column: 1 / 2;
+    grid-row: 2;
+
+}#artista2{
+     margin: 0;
+     grid-column: 2 / 3;
+    grid-row: 2;
+
+ }#artista3{
+       margin: 0;
+      grid-column: 3 / 4;
+        grid-row: 2;
+  }
+
+@media (max-width: 1010px){
+
+    .contenedor {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+
+    }
+    figure{
+        width: fit-content;
+    }
+
+
+}

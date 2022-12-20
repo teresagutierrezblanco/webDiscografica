@@ -1,0 +1,65 @@
+@import url(../estilos.css);
+main{
+    margin-top: 0;
+}
+#notif{
+    float:left;
+    width:45%;
+    margin-left: 2em;
+}
+#notif ul{
+    width:60%;
+    background-color: #C1CED9;
+    padding:5px;
+
+}
+#notif ul li{
+    list-style: none;
+    border-bottom: 2px solid #0E3159;
+}
+#fav{
+    float:right;
+    width: 45%;
+    height: 400px;
+}
+#fav form{
+    width: fit-content;
+    padding: 0;
+}
+#fav h2{
+    width: fit-content;
+    margin-right: 0;
+}
+#eventos{
+    float:left;
+    margin-left: 2em;
+}
+.boton{
+    float: right;
+    padding: 4px;
+    margin-left: 1em;
+    background-color: #C1CED9;
+    border-radius:25px;
+}
+#notif > .boton{
+    float: left;
+    padding: 5px;
+}
+#fav ul{
+    text-align: center;
+    width:40%;
+    background-color: #C1CED9;
+    padding:5px;
+    height: 200px;
+}
+#fav ul li{
+    list-style: none;
+}
+#eventos ul{
+    text-align: center;
+    background-color: #C1CED9;
+    padding:5px;
+}
+#eventos ul li{
+    list-style: none;
+}

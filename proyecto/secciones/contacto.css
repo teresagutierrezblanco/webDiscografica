@@ -1,0 +1,40 @@
+@import url(../estilos.css);
+
+#redes{
+    float:left;
+    width: 30%;
+    margin-left: 2em ;
+}
+#contactar{
+    float: right;
+    width: 35%;
+    margin-left: 4em;
+    margin-right: 2em;
+
+}
+form{
+
+    background-color: #C1CED9;
+}
+#mapa{
+    float:left;
+    margin-left: 2em ;
+}
+figure{
+    float: left;
+    margin-right: 1px;
+}
+iframe{
+    height: 200px;
+    width: 300px;
+}
+.boton {
+    float: right;
+    background-color: #6A8AB0;
+    border-radius: 25px;
+    padding: 5px;
+
+}
+input, textarea{
+    width: 30em;
+}

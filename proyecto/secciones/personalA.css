@@ -1,0 +1,69 @@
+@import url(../estilos.css);
+#proyectos{
+    float: left;
+    width: 50%;
+    height: 550px;
+
+}
+#proyectos ul{
+    height: 300px;
+    width: 60%;
+    background-color: #C1CED9;
+    padding:5px;
+}
+#proyectos ul li{
+    list-style: none;
+}
+#calendario, #estadisticas{
+    float: right;
+    width: 50%;
+}
+#calendario img, #estadisticas img{
+    width: 50%;
+    height: 200px;
+}
+#calendario img{
+
+}
+#proyecto1{
+    float: left;
+    width: 100%;
+}
+.boton{
+    padding: 4px;
+    margin-left: 1em;
+    background-color: #C1CED9;
+    border-radius:25px;
+}
+#general{
+    float: left;
+    width:60%;
+}
+#estado{
+    float: right;
+    width: 40%;
+}
+#coments{
+    float: right;
+    width: 40%;
+
+}
+#coments p{
+    background-color: #C1CED9;
+    padding: 5px;
+    padding-bottom: 100px;
+}
+
+#guardar:hover {
+
+    background-color: #597EA9;
+
+}
+
+p#guardar{
+    width: fit-content;
+    padding: 4px;
+    margin-left: 1em;
+    background-color: #C1CED9;
+    border-radius: 25px;
+}

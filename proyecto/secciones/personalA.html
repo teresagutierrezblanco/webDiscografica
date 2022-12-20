@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="keywords" content="musica, artistas, discografica, fan, rock, indie">
+
+    <title>Página personal artista</title>
+    <link rel="stylesheet" href="personalA.css">
+
+</head>
+<body>
+
+<nav>
+    <ul title="Enlaces">
+        <li><a href="quiensomos.html">Quién somos</a></li>
+        <li><a href="halloffame.html">Hall of Fame</a></li>
+        <li><a href="artistas.html">Artistas</a></li>
+        <li><a href="../index.html"><img class="logo" src="../imagenes/logo.png"></a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="personal.html">Area personal</a></li>
+        <!--<li><a href="contacto.html">Contacto</a></li>-->
+    </ul>
+</nav>
+<main>
+
+    <div id="proyectos">
+        <h1>Hola, ARTISTA</h1>
+        <h2>Mis proyectos</h2>
+        <ul id="lista">
+            <li><a href="#proyecto1">Proyecto 1</a></li>
+            <li>Proyecto 2</li>
+            <li>Proyecto 3</li>
+        </ul>
+
+        <a class="boton" href="#proyecto1">Crear proyecto</a>
+
+    </div>
+    <div id="estadisticas">
+        <h2>Mis estadísticas</h2>
+        <img src="../imagenes/personalA/grafica.jpg" alt="gráfica"/>
+    </div>
+    <div id="calendario">
+        <h2>Calendario</h2>
+        <img src="../imagenes/personalA/calendario.jpg"/>
+    </div>
+    <div id="proyecto1">
+        <h1>Proyecto</h1>
+        <p id="estado">Estado: ACTIVO</p>
+        <div id="general">
+            <form>
+                <label for="titulo">Titulo</label><br>
+                <input type="text" id="titulo" value="Proyecto1"><br>
+                <label for="prop">Propuesta</label><br>
+                <textarea id="prop" name="message" rows="10"
+                          cols="30">Texto editable de descripción del proyecto.</textarea><br>
+                <label for="input">Subir archivos</label><br>
+                <input type="file"
+                       id="input" name="archivo"
+                       accept="audio/*, image/*">
+
+            </form>
+
+            <ul>
+                <li>archivo1.mp3</li>
+                <li>archivo2.mp3</li>
+            </ul>
+            <p class="boton" id="guardar">Guardar</p>
+        </div>
+        <div id="comments">
+            <h2>Comentarios de LBR</h2>
+            <p>Aqui un texto de comentario del proyecto</p>
+        </div>
+    </div>
+
+</main>
+<footer>
+    <p id="direccion">2880 Broadway New York, NY 10025 EE. UU.<br>Copyright 2019</p>
+    <ul>
+        <li>
+            <a href="https://twitter.com/"><img class="red" src="../imagenes/redes/twitter.png"></a>
+        </li>
+        <li>
+            <a href="https://es-es.facebook.com/"><img class="red" src="../imagenes/redes/facebook.png"></a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/"><img class="red" src="../imagenes/redes/youtube.png"></a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/?hl=es"><img class="red" src="../imagenes/redes/instagram.png"></a>
+        </li>
+    </ul>
+</footer>
+<script>//EFECTO 2: AÑADIR PROYECTO
+    document.getElementById("guardar").addEventListener("click", nuevoProyecto);
+    //variable que cuenta los proyectos nuevos añadidos para no pasarnos del espacio que entra en la lista
+    var cuenta=0;
+    function nuevoProyecto() {
+        //flag que se activa cuando el nombre del proyecto está repetido, para no volverlo a añadir
+        var noAnadir=0;
+        //cogemos el texto escrito en el input "titulo"
+        var t = document.getElementById("titulo").value;
+        var lista = document.getElementById("lista");
+        //recorremos la lista de proyectos para comprobar que no existe el nuevo proyecto
+        for (let x of lista.childNodes) {
+            var texto = x.innerText;
+            if (texto === t) {
+                alert(texto+ " ya existe");
+                noAnadir = 1;
+                break;
+            }
+        }//si no existía y no hemos llegado al máximo de proyectos, lo añadimos
+        if (!noAnadir && cuenta<11) {
+            var nodo = document.createElement("li");
+            nodo.innerText = t;
+            lista.appendChild(nodo);
+            cuenta++;
+        }
+    }
+</script>
+<script>
+
+</script>
+</body>
+</html>

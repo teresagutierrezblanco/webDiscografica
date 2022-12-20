@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="keywords" content="musica, artistas, discografica, fan, rock, indie">
+
+    <title>Página personal fan</title>
+    <link rel="stylesheet" href="personalF.css">
+
+</head>
+<body>
+
+<nav>
+    <ul title="Enlaces">
+        <li><a href="quiensomos.html">Quién somos</a></li>
+        <li><a href="halloffame.html">Hall of Fame</a></li>
+        <li><a href="artistas.html">Artistas</a></li>
+        <li><a href="../index.html"><img class="logo" src="../imagenes/logo.png"></a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="personal.html">Area personal</a></li>
+        <!--<li><a href="contacto.html">Contacto</a></li>-->
+    </ul>
+</nav>
+<main>
+    <div id="notif">
+        <h2>Últimas notificaciones</h2>
+
+        <ul id="listaN">
+            <li>Codigo promocional para los tours de tus artistas favoritos: LITTLEBASS22</li>
+            <li>Detrás de las cámaras del videoclip de "Keep it up"-Rex Orange County</li>
+            <li>Haz presave de la próxima canción de Clairo y escuchala antes que nadie</li>
+        </ul>
+        <p class="boton" id="actualizar">Actualizar</p>
+    </div>
+    <div id="fav">
+        <h2>Mis artistas favoritos</h2>
+        <form action="artista1.html">
+            <label for="fname"></label><br>
+            <input type="text" id="fname" name="fname">
+            <a href="" class="boton">Buscar</a>
+        </form>
+        <ul>
+            <li><a href="artista1.html">Wallows</a></li>
+            <li>Joji</li>
+            <li>alt-j</li>
+        </ul>
+        <a href="artistas.html">Ver todos</a>
+    </div>
+    <div id="eventos">
+        <h2>Mis eventos</h2>
+
+        <ul>
+            <li><a href="eventos.html#evento1">Lollapalooza</a></li>
+            <li>Madcool</li>
+            <li>Rock in Rio</li>
+        </ul>
+        <form action="eventos.html">
+            <label for="fname1"></label><br>
+            <input type="text" id="fname1" name="fname">
+            <a href="" class="boton">Buscar</a>
+        </form>
+        <a href="eventos.html">Ver todos</a>
+    </div>
+</main>
+<footer>
+    <p id="direccion">2880 Broadway New York, NY 10025 EE. UU.<br>Copyright 2019</p>
+    <ul>
+        <li>
+            <a href="https://twitter.com/"><img class="red" src="../imagenes/redes/twitter.png"></a>
+        </li>
+        <li>
+            <a href="https://es-es.facebook.com/"><img class="red" src="../imagenes/redes/facebook.png"></a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/"><img class="red" src="../imagenes/redes/youtube.png"></a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/?hl=es"><img class="red" src="../imagenes/redes/instagram.png"></a>
+        </li>
+    </ul>
+</footer>
+<script src="../recursos/jquery-3.6.0.min.js" type="text/javascript"></script>
+<script>
+    $("#actualizar").click(notifsNuevas);
+    var nuevas = ["Notificacion 1", "Notificacion 2", "Notificacion 3",
+        "Notificacion 4", "Notificacion 5", "Notificacion 6", "Notificacion 7"]
+    var cuenta = 0;
+    function notifsNuevas() {
+        //listaN es un <ul>, cogemos sus hijos <li>
+        var lista=$("#listaN");
+        var elementos = lista.children();
+        var longitud = elementos.length;
+
+        //ponemos una notificacion nueva en cada hijo
+        for (i = 0; i < longitud; i++) {
+            elementos[i].textContent = nuevas[(i + cuenta) % nuevas.length];
+        }
+        cuenta += longitud;
+
+    }
+</script>
+</body>
+</html>

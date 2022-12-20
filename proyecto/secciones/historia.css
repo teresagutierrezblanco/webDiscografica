@@ -1,0 +1,47 @@
+@import url(../estilos.css);
+p{
+    float:right;
+    width: 50%;
+    position: relative;
+    margin-right: 100px;
+}
+aside{
+    position: relative;
+
+
+
+}
+#artistas{
+    position: absolute; left: 40px;
+}
+#eventos{
+    position: absolute; left: 140px; top: 70px
+}
+#hall{
+    position: absolute; left: 40px; top: 170px
+}
+h1{
+    position: relative;
+    clear: both;
+    float: right;
+    font-size: 60px;
+    margin-right: 80px;
+}
+@media (max-width: 1000px){
+
+    main{
+        display: flex;
+        flex-direction: column;
+
+    }
+    #artistas, #eventos,#hall{
+        position: static;
+    }
+    p{
+        width: 100%;
+    }
+    aside{
+        width: 100%;
+    }
+
+}

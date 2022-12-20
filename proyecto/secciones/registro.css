@@ -1,0 +1,71 @@
+@import url(../estilos.css);
+h1{
+    float: right;
+    clear: both;
+    font-size: 42px;
+    width: 25%;
+    margin-top: 0;
+    margin-right: 10%;
+    margin-bottom: 20%;
+}
+#campos{
+    overflow: hidden;
+    float:left;
+    margin-left: 20em;
+
+    height: fit-content;
+    justify-content: center;
+
+
+}
+
+input{
+
+    width: 20em;
+    height: 1.5em;
+    background-color: #597EA9;
+
+}
+.redes{
+    width: 20em;
+    align-content: center;
+}
+#inicio{
+     float: left;
+    text-align: center;
+ }
+#boton{
+    float: left;
+    margin: 1em;
+    padding: 4px;
+    background-color: #C1CED9;
+    border-radius:25px;
+}
+@media (max-width: 1000px){
+
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    h2, #boton, #inicio, .redes, input{
+        float: left;
+        margin-left: 0;
+
+    }
+    h2{
+        width: 100%;
+    }
+    .redes, label{
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    #campos{
+        margin-left: 0;
+        width: 100%;
+    }
+    h1{
+        float: left;
+    }
+
+
+}

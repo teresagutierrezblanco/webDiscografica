@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="keywords" content="musica, artistas, discografica, fan, rock, indie">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="eventos.css">
+
+</head>
+<body>
+
+<nav>
+    <ul title="Enlaces">
+        <li><a href="quiensomos.html">Quién somos</a></li>
+        <li><a href="halloffame.html">Hall of Fame</a></li>
+        <li><a href="artistas.html">Artistas</a></li>
+        <li><a href="../index.html"><img class="logo" src="../imagenes/logo.png"></a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="personal.html">Area personal</a></li>
+    </ul>
+</nav>
+<main>
+    <div class="contacto"><a href="contacto.html">CONTACTO</a></div>
+
+    <div id="contenedor">
+        <h1 id="titulo">EVENTOS</h1>
+        <div id="festivales1">
+            <p>LOLLAPALOOZA</p>
+            <p>ROCK IN RIO</p>
+            <p class="ultimo">GLASTONBURY</p>
+        </div>
+        <div id="festivales2">
+            <p>MADCOOL</p>
+            <p>SON DO CAMIÑO</p>
+            <p>PRIMAVERA SOUND</p>
+            <p>SZIGET</p>
+        </div>
+        <div id="festivales3">
+            <p>READING AND LEEDS</p>
+            <p>COACHELLA</p>
+            <p>LOVELOUD</p>
+        </div>
+    </div>
+    <div id="evento1">
+        <figure id="volver">
+            <img src="../imagenes/flecha.png"/>
+        </figure>
+        <div id="descrip">
+            <h1 id="tituloEvento">LOLLAPALOOZA</h1>
+            <p id="descripEvento">Con 4 escenarios y más de 70 artistas de todo el mundo, se considera el mejor fin de
+                semana del año. Para
+                cantar,
+                gritar, bailar, emocionarse y crear memorias que durarán toda la vida.</p>
+        </div>
+
+        <table>
+            <caption>Datos del evento</caption>
+            <tr>
+                <th>Ubicación:</th>
+                <td id="ubi">San Paulo, Brasil</td>
+            </tr>
+            <tr>
+                <th>Fecha:</th>
+                <td id="fecha">25, 26 y 27 de marzo</td>
+            </tr>
+            <tr>
+                <th>Artistas LBR invitados:</th>
+                <td>Wallows, Clairo, Grouplove</td>
+            </tr>
+        </table>
+
+        <ul id="links">
+            <li>
+                <a href="https://ticketsforfun.byinti.com/#/event/lollapalooza">Ir al portal de entradas</a>
+            </li>
+            <li>
+                <a href="personalF.html">Añadir a mis eventos</a>
+            </li>
+        </ul>
+    </div>
+
+</main>
+<footer>
+    <p id="direccion">2880 Broadway New York, NY 10025 EE. UU.<br>Copyright 2019</p>
+    <ul>
+        <li>
+            <a href="https://twitter.com/"><img class="red" src="../imagenes/redes/twitter.png"></a>
+        </li>
+        <li>
+            <a href="https://es-es.facebook.com/"><img class="red" src="../imagenes/redes/facebook.png"></a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/"><img class="red" src="../imagenes/redes/youtube.png"></a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/?hl=es"><img class="red" src="../imagenes/redes/instagram.png"></a>
+        </li>
+    </ul>
+</footer>
+<script src="../recursos/jquery-3.6.0.min.js" type="text/javascript"></script>
+<script>
+$("#contenedor p").click(notifsNuevas);
+var titulo;
+//funcion que accede al archivo xml y la manda a la funcion escribe()
+function notifsNuevas() {
+    //cogemos el titulo sobre el que se ha hecho click
+    titulo = $(this).text();
+    //creamos el objeto XMLHttpRequest, indicamos el archivo y mandamos la petición
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "../recursos/eventos.xml", true);
+    xhttp.send();
+    //verificamos que la petición se ha resuelto correctamente
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            //llamamos a la función que procesará los datos
+            escribe(this);
+        }
+    };
+}
+//función que procesa el archivo xml leído
+function escribe(xml) {
+    var documento = xml.responseXML;
+    var x = documento.getElementsByTagName("evento");
+    let contenedor = $("#contenedor");
+    //ocultamos el contenedor de los titulos de los eventos con una animación de jQuery
+    contenedor.slideToggle();
+    $("#tituloEvento").text(titulo);
+    let volver = $("#volver");
+    //mostramos el botón de retroceso
+    volver.show();
+    //buscamos entre los eventos leídos del XML aquel cuyo titulo coincide con el pulsado
+    for (let evento of x) {
+        if (evento.children[0].textContent === titulo) {
+            //y escribimos sus datos
+            $("#descripEvento").text(evento.children[2].textContent);
+            $("#ubi").text(evento.children[1].textContent);
+            $("#fecha").text(evento.children[3].textContent);
+            break;
+        }
+    }
+    //EFECTO 4: Botón de volver a los eventos
+    volver.click(function () {
+        //volvemos a mostrar el contenedor de eventos mediante una animación de jQuery
+        contenedor.slideDown();
+        //escondemos el botón
+        volver.hide();
+    })
+}
+</script>
+
+</body>
+</html>

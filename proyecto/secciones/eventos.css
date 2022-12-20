@@ -1,0 +1,115 @@
+@import url(../estilos.css);
+#contenedor{
+    display: grid;
+    grid-template-areas:
+'titulo titulo titulo titulo'
+'grande grande grande grande'
+'pequeno pequeno pequeno pequeno'
+'grande2 grande2 grande2 grande2';
+}
+#titulo{
+    grid-area: titulo;
+    text-align: center;
+    font-size: 50px;
+}
+#festivales1{
+    grid-area: grande;
+    text-align: center;
+    margin-left: 1em;
+}
+
+#festivales1 >p{
+    display: inline-block;
+
+    font-size: 42px;
+    margin-right: 1em;
+
+}
+#festivales1 p:hover , #festivales2 p:hover, #festivales3 p:hover{
+    color: #597EA9;
+}
+.ultimo{
+    margin-right: 0;
+    margin-left: 0;
+
+
+}
+#festivales2{
+    grid-area: pequeno;
+    text-align: center;
+    margin-left: 1em;
+}
+
+#festivales2 >p{
+    display: inline-block;
+
+    font-size: 32px;
+    margin-right: 1em;
+}
+#festivales3{
+    grid-area: grande2;
+
+    text-align: center;
+    margin-left: 1em;
+}
+
+#festivales3 >p{
+    display: inline-block;
+
+    font-size: 42px;
+
+    margin-right: 1em;
+}
+#descrip{
+
+    height: fit-content;
+    float: left;
+    width: 50%;
+    margin-right: 5%;
+}
+#evento1 table{
+    float: right;
+    width: 40%;
+}
+
+td,th{
+    padding:1em;
+    background-color: #C1CED9;
+}
+
+#descrip{
+    margin-left: 1em;
+
+}
+#links{
+    list-style-type: none;
+
+}
+#volver{
+    display: none;
+    clear: both;
+    width: 90%;
+    float: left;
+    align-items: center;
+}
+#links li{
+    width: fit-content;
+    float: left;
+
+}
+#links li:last-child{
+    border-left: 3px solid #C1CED9;
+    padding-left: 6em;
+    margin-left: 6em;
+}
+@media (max-width: 750px){
+
+    #descrip{
+        width: 98%;
+    }
+    #evento1 table{
+        float: left;
+        width: 98%;
+    }
+
+}

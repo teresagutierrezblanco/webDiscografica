@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<eventos>
+    <evento>
+        <titulo>LOLLAPALOOZA</titulo>
+        <ubicacion>Sao Paulo, Brasil</ubicacion>
+        <descrip>Con 4 escenarios y más de 70 artistas de todo el mundo, se considera el mejor fin de
+            semana del año. Para cantar, gritar, bailar, emocionarse y crear memorias que durarán
+            toda la vida!
+        </descrip>
+        <fecha>25, 26 y 27 de marzo</fecha>
+    </evento>
+    <evento>
+        <titulo>ROCK IN RIO</titulo>
+        <ubicacion>Rio de Janeiro, Brasil</ubicacion>
+        <descrip>Rock in Rio es un evento originario de Brasil que incluye una serie de conciertos de rock y pop. Es
+            conocido mundialmente como "El festival más grande del mundo".
+        </descrip>
+        <fecha>2 sept - 11 sept</fecha>
+    </evento>
+    <evento>
+        <titulo>GLASTONBURY</titulo>
+        <ubicacion>Pilton, Reino Unido</ubicacion>
+        <descrip>El festival Glastonbury combina todos los mejores aspectos de un festival. Dar un paso es
+            como ir a otro país, ya que está dividido en zonas socio-geográficas
+        </descrip>
+        <fecha>22-26 junio</fecha>
+    </evento>
+    <evento>
+        <titulo>MADCOOL</titulo>
+        <ubicacion>Madrid, España</ubicacion>
+        <descrip>Mad Cool es un festival de música que se realiza en Madrid desde el año 2016. El arte, la moda, la
+            gastronomía y el turismo se unen eclécticamente en este festival.
+        </descrip>
+        <fecha>6 jul – 10 jul</fecha>
+    </evento>
+    <evento>
+        <titulo>SON DO CAMIÑO</titulo>
+        <ubicacion>Santiago de Compostela, Galicia</ubicacion>
+        <descrip>El festival que lleva a Galicia al panorama internacional. No te pierdas la edición del año Xacobeo!
+        </descrip>
+        <fecha>jue, 16 jun 2022 – sáb, 18 jun 2022</fecha>
+    </evento>
+    <evento>
+        <titulo>PRIMAVERA SOUND</titulo>
+        <ubicacion>Barcelona, España</ubicacion>
+        <descrip>El festival aúna en sus carteles las últimas propuestas musicales del ámbito independiente abarcando
+            cualquier estilo o género,
+            esencialmente por el pop, el rock y las tendencias más underground de la música electrónica y de baile.
+        </descrip>
+        <fecha>25, 26 y 27 de marzo</fecha>
+    </evento>
+    <evento>
+        <titulo>SZIGET</titulo>
+        <ubicacion>Budapest, Hungría</ubicacion>
+        <descrip>El Sziget Festival es uno de los festivales de música y cultura más grandes de Europa. Se lleva a cabo
+            cada mes de agosto en el norte de Budapest, Hungría, en la isla de Óbuda, una frondosa isla de 108 ha en el
+            Danubio. Más de 1.000 actuaciones tienen lugar cada año
+        </descrip>
+        <fecha>10 ago – 15 ago</fecha>
+    </evento>
+    <evento>
+        <titulo>READING AND LEEDS</titulo>
+        <ubicacion>Reino unido</ubicacion>
+        <descrip>El Festival de Reading y Leeds es un festival musical anual que se realiza en las ciudades de Reading y
+            de Leeds, en Inglaterra. Los eventos tienen lugar simultáneamente el viernes, sábado y domingo en el bank
+            holiday de agosto, compartiendo la misma programación
+        </descrip>
+        <fecha>26 ago – 28 ago</fecha>
+    </evento>
+    <evento>
+        <titulo>COACHELLA</titulo>
+        <ubicacion>California, Estados Unidos</ubicacion>
+        <descrip>El Festival de Música y Artes de Coachella Valley es un gran festival de música que se desarrolla
+            durante tres días en la última semana del mes de abril y tiene lugar en Indio, California, Estados Unidos en
+            el Valle de Coachella en el desierto de Colorado.
+        </descrip>
+        <fecha>15 abr – 24 abr</fecha>
+    </evento>
+    <evento>
+        <titulo>LOVELOUD</titulo>
+        <ubicacion>Salt Lake City, Utah</ubicacion>
+        <descrip>Este festival de música, derivado de la Fundación con el mismo nombre y creada por Dan Reynolds tiene
+            como finalidad acoger y ayudar a jóvenes y familias que están pasando por el proceso de aceptación.
+        </descrip>
+        <fecha>15 de mayo</fecha>
+    </evento>
+
+
+</eventos>
